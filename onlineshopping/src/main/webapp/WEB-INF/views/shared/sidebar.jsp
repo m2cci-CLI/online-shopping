@@ -1,12 +1,12 @@
  
- <p class="lead">Wellphone Shop</p>
+ <p class="lead"> Nom de la boutique </p>
  
  <!-- list group -->
                 <div class="list-group">
                 
                 <c:forEach items="${categories}" var="category">
                 
-                 <a href="#" class="list-group-item">${category.name}</a>
+                 <a href="${contextRoot}/show/category/${category.id}/products" class="list-group-item" id="a_${category.name}">${category.name}</a>
                 
                 </c:forEach>
                     </div>
