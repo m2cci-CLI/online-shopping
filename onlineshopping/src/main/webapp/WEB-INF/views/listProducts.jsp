@@ -62,18 +62,24 @@ window.categoryId = '${category.id}';
 <table id="productListTable" class="table table-striped table-borderd">
 <thead>
 <tr>
+<th></th>
 <th>Name</th>
 <th>Brand</th>
 <th>price</th>
 <th>Qty.Available</th>
+<th></th>
+
 </tr>
 </thead>
 <tfoot>
 <tr>
+<th></th>
 <th>Name</th>
 <th>Brand</th>
 <th>price</th>
 <th>Qty.Available</th>
+<th></th>
+
 </tr>
 </tfoot>
 </table>

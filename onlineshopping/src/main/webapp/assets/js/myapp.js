@@ -52,6 +52,18 @@ ajax:{
 			},
 			
 			columns :[
+				
+				{
+					data : 'code',
+					bSortable : false,
+					mRender : function(data, type, row) {
+
+						return '<img src="' + window.contextRoot
+								+ '/resources/images/' + data
+								+ '.jpg"   style="width:70px" style="height: 70px"/>';
+
+					}
+				},
 				{
 					data:'name'
 				},
@@ -61,12 +73,44 @@ ajax:{
 				},
 
 				{
-					data:'unitPrice'
+					data:'unitPrice',
+						mRender : function(data, type, row) {
+							return '&#8364; ' + data
+						}
 					
 				},
 			
 				{
 					data:'quantity'
+				},
+				
+				{
+					bSortable : false,
+					data : 'id',
+					mRender : function(data, type, row) {
+
+						var str = '';
+						str += '<a href="'
+								+ window.contextRoot
+								+ '/show/'
+								+ data
+								+ '/product" class="btn btn-primary"><span class="glyphicon glyphicon-eye-open"></span></a> &#160;';
+
+						
+						
+
+								str += '<a href="'
+										+ window.contextRoot
+										+ '/cart/add/'
+										+ data
+										+ '/product" class="btn btn-success"><span class="glyphicon glyphicon-shopping-cart"></span></a>';
+						
+							
+						
+						return str;
+
+					}
+
 				}
 				
 				]
