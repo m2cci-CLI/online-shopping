@@ -15,6 +15,10 @@ $(function() {
 		$('#listProducts').addClass('active');
 		break;
 		
+	case 'Manage Products':
+		$('#manageProducts').addClass('active');
+		break;
+		
 	default :
 		
 		if(menu == "Home") break;
@@ -132,6 +136,21 @@ ajax:{
 	
 	
 	}
+	
+	
+	
+	var $alert =$('.alert');
+	if($alert.lenght){
+		
+		setTimeout(function() {
+			
+			$alert.fadeOut('slow');
+			
+		},3000)
+		
+		
+	}
+			
 	
 	
 	

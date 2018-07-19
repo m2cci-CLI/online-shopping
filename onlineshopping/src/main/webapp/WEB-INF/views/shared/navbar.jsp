@@ -25,6 +25,10 @@
                         <a href="${contextRoot}/show/all/products">Nos produits</a>
                     </li >
                     
+                    <li id="manageProducts">
+                        <a href="${contextRoot}/manage/products">Manage produits</a>
+                    </li >
+                    
                     
                     
                 </ul>
