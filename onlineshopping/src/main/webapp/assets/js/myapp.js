@@ -139,16 +139,13 @@ ajax:{
 	
 	
 	
-	var $alert =$('.alert');
-	if($alert.lenght){
-		
+	/* for fading out the alert message after  seconds */
+	$alert = $('.alert');
+	if($alert.length) {
 		setTimeout(function() {
-			
-			$alert.fadeOut('slow');
-			
-		},3000)
-		
-		
+	    	$alert.fadeOut('slow');
+		   }, 3000
+		);		
 	}
 			
 	
