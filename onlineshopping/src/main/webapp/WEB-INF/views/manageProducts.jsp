@@ -88,6 +88,8 @@ ${message}
 <label class="control-label col-md-4" for="file">Select an Image:</label>
 <div class="col-md-8">
 <sf:input type="file" path="file" id="file"  class="form-control"/>
+<sf:errors path="file" cssClass="help-block" element="em"/> 
+
 </div>
 </div>
 
@@ -138,4 +140,61 @@ itemValue="id"
 
 
 </div>
+
+
+<div class="row">
+				
+		
+		<div class="col-xs-12">
+		<hr/>	
+	<h3>Available Products</h3>
+	<hr/>
+		</div>
+				
+		
+		<div class="col-xs-12">
+		
+		<div style="overflow:auto">
+		
+			<table id="adminProductsTable" class="table table-condensed table-bordered">
+							
+				<thead>					
+					<tr>					
+						<th>Id</th>
+						<th>&#160;</th>
+						<th>Name</th>
+						<td>brand</td>
+						<th>Qty. Avail</th>
+						<th>Unit Price</th>
+						<th>Activate</th>				
+						<th>Edit</th>
+					</tr>					
+				</thead>
+				
+				
+				
+				<tfoot>
+					<tr>					
+						<th>Id</th>
+						<th>&#160;</th>
+						<th>Name</th>
+						<td>brand</td>
+						
+						<th>Qty. Avail</th>
+						<th>Unit Price</th>
+						<th>Activate</th>				
+						<th>Edit</th>
+					</tr>									
+				</tfoot>
+				
+							
+			</table>
+		
+		
+		</div>
+	</div>
+	
+	</div>
+
+
 </div>
