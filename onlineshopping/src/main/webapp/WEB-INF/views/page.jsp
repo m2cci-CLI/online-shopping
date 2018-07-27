@@ -108,9 +108,10 @@
 		<!-- Self coded javascript -->
 		<!-- dataTable boostrap script -->
 		<script src="${js}/dataTables.bootstrap.js"></script>
-		<!-- BootBox -->
-		<script src="${js}/bootbox.min.js"></script>
 		
+		<!-- BootBox -->
+		
+        <script src="${js}/bootbox.min.js"></script>		
 	
 		<!-- Self coded javascript -->
 		<script src="${js}/myapp.js"></script>

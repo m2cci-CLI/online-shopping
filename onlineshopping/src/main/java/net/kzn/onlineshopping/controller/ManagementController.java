@@ -57,10 +57,32 @@ private static final Logger logger = LoggerFactory.getLogger(ManagementControlle
 			if(operation.equals("product")) {
 				mv.addObject("message","product Submited succefully!");
 			}
+			
+			
+			else if(operation.equals("category")) {
+				mv.addObject("message","Category Submited succefully!");}
 		}
 		
 		return mv;
 		}
+	
+	
+
+	@RequestMapping(value="/{id}/product" ,method=RequestMethod.GET)
+	public ModelAndView manageProductEdit(@PathVariable int id) {		
+
+		ModelAndView mv = new ModelAndView("page");	
+		mv.addObject("userClickManageProduct",true);
+		mv.addObject("title","Product Management");		
+
+		
+		// Product nProduct = new Product();		
+		mv.addObject("product", productDAO.get(id));
+
+			
+		return mv;
+		
+	}
 	
 	@RequestMapping(value = "/products", method=RequestMethod.POST)
 	public String handleProductSubmission(@Valid @ModelAttribute("product") Product mProduct , BindingResult results,Model model ,HttpServletRequest request) {
@@ -112,6 +134,16 @@ if(!mProduct.getFile().getOriginalFilename().equals("")) {
 				: "You have succesfully activated the product id" + product.getId();
 					
 	}
+	
+	//AJOUTER CATEGORY
+	@RequestMapping(value = "/category", method=RequestMethod.POST)
+	public String handleCategorySubmission(@ModelAttribute Category category) {
+		
+		categoryDAO.add(category);
+		
+		return "redirect:/manage/products/?operation=category";
+		}
+	
 
 	
 	// returning categories for all the request mapping 
@@ -120,6 +152,17 @@ if(!mProduct.getFile().getOriginalFilename().equals("")) {
 		
 		return categoryDAO.list();
 	}
+	
+	
+	
+	@ModelAttribute("category")
+	public Category getCategory(){
+		
+		return new Category();
+	}
+	
+	
+	
 	}
 
 
